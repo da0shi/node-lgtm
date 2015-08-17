@@ -1,0 +1,23 @@
+{
+  "name": "lgtm",
+  "version": "1.0.0",
+  "description": "cli to get images from lgtm.in/g",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/da0shi/node-lgtm.git"
+  },
+  "keywords": [
+    "cli",
+    "lgtm"
+  ],
+  "author": "da0shi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/da0shi/node-lgtm/issues"
+  },
+  "homepage": "https://github.com/da0shi/node-lgtm#readme"
+}
