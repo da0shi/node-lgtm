@@ -2,16 +2,24 @@
 'use strict';
 
 var
-  request   = require('request'),
-  clipboard = require('copy-paste');
+  clipboard = require('copy-paste'),
+  request   = require('request');
+
+var
+  FAILURE_EXIT = 1,
+  SUCCESS_EXIT = 1;
 
 var options = {
   url: 'http://www.lgtm.in/g',
-  method: 'GET'
+  method: 'GET',
+  json: true
 };
 
-request(options, function (error, response, body) {
-  console.log('Error:', error);
-  console.log('Response:', response);
-  console.log('Body:', body);
+request(options, function (error, response, json) {
+  if (error) {
+    console.log("Error:", error);
+    return 1;
+  }
+  var lgtm = "![LGTM]("+ json.imageUrl +")";
+  return clipboard.copy(lgtm);
 });
