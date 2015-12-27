@@ -21,5 +21,6 @@ request(options, function (error, response, json) {
     return 1;
   }
   var lgtm = "![LGTM]("+ json.imageUrl +")";
+  console.log(lgtm);
   return clipboard.copy(lgtm);
 });
